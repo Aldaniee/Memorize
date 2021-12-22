@@ -9,53 +9,55 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var emojiCount = 4
-    
+    @ObservedObject var viewModel: EmojiMemoryGame
+        
     var body: some View {
-        VStack {
-            ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]) {
-                    ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
-                        CardView(content: emoji).aspectRatio(2/3, contentMode: .fit)
-                    }
+        ScrollView {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]) {
+                ForEach(viewModel.cards) { card in
+                    CardView(card: card)
+                        .aspectRatio(2/3, contentMode: .fit)
+                        .onTapGesture {
+                            viewModel.choose(card)
+                        }
                 }
             }
-            .foregroundColor(.red)
-            Spacer()
-            HStack {
-                Spacer()
-            }
-            .font(.largeTitle)
-            .padding(.horizontal)
         }
+        .foregroundColor(.red)
+        Spacer()
+        HStack {
+            Spacer()
+        }
+        .font(.largeTitle)
         .padding(.horizontal)
     }
 }
 
 struct CardView: View {
-    var content: String
-    @State var isFaceUp: Bool = true
-
+    let card: MemoryGame<String>.Card
+    
     var body: some View {
         ZStack {
             let shape = RoundedRectangle(cornerRadius: 20)
-            if isFaceUp {
+            if card.isFaceUp {
                 shape.fill().foregroundColor(.white)
                 shape.strokeBorder(lineWidth: 3)
-                Text(content).font(.largeTitle)
-            } else {
+                Text(card.content).font(.largeTitle)
+            } else if card.isMatched {
+                shape.opacity(0)
+            }
+            else {
                 shape.fill()
             }
-        }
-        .onTapGesture {
-            isFaceUp = !isFaceUp
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .preferredColorScheme(.dark)
+        Group {
+            ContentView(viewModel: EmojiMemoryGame())
+                .preferredColorScheme(.dark)
+        }
     }
 }
