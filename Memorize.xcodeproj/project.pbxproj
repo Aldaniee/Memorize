@@ -15,6 +15,7 @@
 		EA8CB6402771622B00CAF379 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CB63F2771622B00CAF379 /* EmojiMemoryGame.swift */; };
 		EA8CB64A2774C6B900CAF379 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CB6492774C6B900CAF379 /* AspectVGrid.swift */; };
 		EA8CB66B2778D9FC00CAF379 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CB66A2778D9FB00CAF379 /* Pie.swift */; };
+		EA8CB66D2778DEDE00CAF379 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CB66C2778DEDE00CAF379 /* Cardify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		EA8CB63F2771622B00CAF379 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		EA8CB6492774C6B900CAF379 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 		EA8CB66A2778D9FB00CAF379 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		EA8CB66C2778DEDE00CAF379 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				EA8CB63D277160C100CAF379 /* MemoryGame.swift */,
 				EA8CB63F2771622B00CAF379 /* EmojiMemoryGame.swift */,
 				EA802A68276FFB95009EA5A8 /* EmojiMemoryGameView.swift */,
+				EA8CB66C2778DEDE00CAF379 /* Cardify.swift */,
 				EA8CB66A2778D9FB00CAF379 /* Pie.swift */,
 				EA8CB6492774C6B900CAF379 /* AspectVGrid.swift */,
 				EA802A66276FFB95009EA5A8 /* MemorizeApp.swift */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA8CB66B2778D9FC00CAF379 /* Pie.swift in Sources */,
+				EA8CB66D2778DEDE00CAF379 /* Cardify.swift in Sources */,
 				EA8CB63E277160C100CAF379 /* MemoryGame.swift in Sources */,
 				EA802A69276FFB95009EA5A8 /* EmojiMemoryGameView.swift in Sources */,
 				EA802A67276FFB95009EA5A8 /* MemorizeApp.swift in Sources */,
